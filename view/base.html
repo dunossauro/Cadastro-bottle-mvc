@@ -1,0 +1,16 @@
+<html>
+   <body>
+      <a href="/">Voltar a home</a>
+      <br>
+     <h1>Base de usuários</h1>
+     <table>
+        <tr><th>ID</th><th>Usuário</th><th>E-mail</th></tr>
+        %for row in rows:
+        <tr>
+           %for col in row:
+               <td>{{col}}</td>
+           %end
+        </tr>
+        %end
+     </table>
+</body>
