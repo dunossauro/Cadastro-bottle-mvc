@@ -56,6 +56,7 @@ def base():
         assert data[0]
         return template('view/base', rows=data)
     except:
-        return error
+        saida = Repr()
+        return saida.error
 
 run(host=ip, port=8080)
