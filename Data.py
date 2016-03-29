@@ -18,10 +18,10 @@ class Base:
 		self.con = sqlite3.connect('base_usuarios.db')
 		self.cur = self.con.cursor()
 
-        # -------------- Select
+		# -------------- Select
 		self.select = 'SELECT ID,NOME,EMAIL FROM USUARIOS'
 
-        # -------------- Insert
+        	# -------------- Insert
 		self.insert = 'INSERT INTO USUARIOS (NOME, EMAIL) VALUES (?, ?)'
 
 
@@ -29,7 +29,7 @@ class Base:
 		self.cur.execute(self.select)
 		return self.cur.fetchall()
 
-    # -------------- Método que faz inserção no banco
+    	# -------------- Método que faz inserção no banco
 	def inserir_dados(self, nome, email):
 		self.cur.execute(self.insert, (nome, email))
 
