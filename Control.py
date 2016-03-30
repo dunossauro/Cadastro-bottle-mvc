@@ -37,7 +37,6 @@ def cadastro():
     nome = request.forms.get('nome')
     email = request.forms.get('mail')
     try:
-        assert nome != ''
         assert email != '' and "@" in email
         db.inserir_dados(nome,email)
         db.commit()
@@ -56,7 +55,6 @@ def base():
         assert data[0]
         return template('view/base', rows=data)
     except:
-        saida = Repr()
-        return saida.error
+        return error
 
 run(host=ip, port=8080)
