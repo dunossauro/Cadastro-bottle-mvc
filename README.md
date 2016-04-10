@@ -9,14 +9,14 @@ O Objetivo desse projeto é mostrar a simples interação entre SQLite3 e Bottle
 O arquivo data.py tem uma classe simples para importação no arquivo de controle e dispoões de algumas operações simples de SQL como Busca e Inserção
 
 ### Busca
-```
+```python
 from Data import Base
 db = Base()
 data = db.busca   #Retorna uma lista de tuplas do banco
 ```
 
 ### Inserção
-```
+```python
 from Data import Base
 db = Base()
 db.inserir(<val_1>,<val_2>)
@@ -28,7 +28,7 @@ O arquivo Control.py é a interface de controle entre as Views do sistema e as r
 
 ### Comandos do Bottle
 
-```
+```python
 from bottle import post, request
 
 @route('/')                                       #Diz qual a URL vai retornar a view da linha inferior
@@ -44,7 +44,7 @@ run(host=<IP>, port=<Porta>)                      #Sobe um servidor WSGIRefServe
 ```
 ### Views
 
-```
+```html
 <h1>{{ <var> }}</h1>                                       #Exibe as variáveis parradas com a função template
 
 %for elemento in sequência:                                #Faz a iteração de uma sequência passada por parâmetro
